@@ -17,9 +17,12 @@ Note: If a device doesn't support a particular layer, an alternative to creating
 
 ## Comparing Model Performance
 
-My method(s) to compare models before and after conversion to Intermediate Representations
+My method(s) to compare model ssd_mobilenet_v2_coco_2018_03_29 before and after conversion to Intermediate Representations
 were...
 * The initail (test) models were downloaded from the Tensorflow Model Zoo and were significantly larger in size compared to the Intel Pretrained Model that was selected.
+* Size of model before conversion was 67MB (frozen_inference_graph.pb) and size of model after conversion was 65.11MB (bin+xml).
+* Loading + inference time before conversion was (3 min + 10 sec)  and after conversion loading + inference time was (2min + 8 sec) 
+* Accuracy was low for ssd_mobilenet_v2_coco_2018_03_29 in comparison to person-detection-retail-0013 model.
 * The person-detection-retail-0013 model was the most accurate in detection of persons in the
 frames.
 
